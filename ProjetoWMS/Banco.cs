@@ -15,7 +15,7 @@ namespace ProjetoWMS
 
         public static SQLiteConnection ConexaoBanco()
         {
-           //teste gihub
+           //teste gihubs
             conexao = new SQLiteConnection("Data Source=D:\\R4\\ProjetoWMS\\ProjetoWMS\\BD\\WMS");
             conexao.Open();
             return conexao;
