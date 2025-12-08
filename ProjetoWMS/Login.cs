@@ -49,7 +49,6 @@ namespace ProjetoWMS
                 return;
             }
             else
-
                 MessageBox.Show("Senha nao cadastrada\" !", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
