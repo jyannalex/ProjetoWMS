@@ -25,4 +25,15 @@ namespace ProjetoWMS
     {
         public static string UsuarioLogado { get; set; }
     }
+
+    public class Lancamento
+    {
+        public int ID_Lancamento { get; set; }
+        public int Cod_Produto { get; set; }
+        public int Cod_Local { get; set; }
+        public decimal Quantidade { get; set; }
+        public int Tipo_Lancamento { get; set; }
+        public string Data_Lancamento { get; set; }
+        public string Usuario { get; set; }
+    }
 }

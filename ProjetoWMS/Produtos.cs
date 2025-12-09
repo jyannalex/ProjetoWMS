@@ -52,7 +52,7 @@ namespace ProjetoWMS
             else
             {
                 bd.CadastraProduto(Convert.ToInt32(txtProduto.Text), txtDescricaoProduto.Text, txtCodBarra.Text, txtUnVenda.Text, Convert.ToDecimal(txtCusto.Text));
-                MessageBox.Show("Produto Cadastrado");
+                MessageBox.Show("Produto Cadastrado" ,"Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtProduto.Text = "";
                 txtDescricaoProduto.Text = "";
                 txtCodBarra.Text = "";
@@ -103,7 +103,7 @@ namespace ProjetoWMS
             if (bd.ProdutoExiste == true)
             {
                 bd.ExcluirProduto(Convert.ToInt32(txtProduto.Text));
-                MessageBox.Show("Produto Excluido");
+                MessageBox.Show("Produto Excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtProduto.Text = "";
                 txtDescricaoProduto.Text = "";
                 txtCodBarra.Text = "";
@@ -113,7 +113,7 @@ namespace ProjetoWMS
             }
             else
             {
-                MessageBox.Show("Produto Nao Existe");
+                MessageBox.Show("Produto Nao Existe", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtProduto.Text = "";
                 txtDescricaoProduto.Text = "";
                 txtCodBarra.Text = "";

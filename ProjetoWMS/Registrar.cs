@@ -48,6 +48,10 @@ namespace ProjetoWMS
 
         private void txtEmail_Leave(object sender, EventArgs e)
         {
+            if(txtEmail.Text == "")
+            {
+                return;
+            }
             if(txtEmail.Text.Contains("@") == false || txtEmail.Text.Contains(".com") == false)
             {
                 MessageBox.Show("Email invalido\" !", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);

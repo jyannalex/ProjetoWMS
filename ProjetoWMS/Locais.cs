@@ -63,7 +63,7 @@ namespace ProjetoWMS
             if (bd.LocalExiste == true)
             {
                 bd.AtualizarLocais(Convert.ToInt32(txtLocal.Text), txtDescricaoLocal.Text, Convert.ToInt32(txtCapacidade.Text));
-                MessageBox.Show("Local Atualizado");
+                MessageBox.Show("Local Atualizado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtLocal.Text = "";
                 txtDescricaoLocal.Text = "";
                 txtCapacidade.Text = "";
@@ -72,7 +72,7 @@ namespace ProjetoWMS
             else
             {
                 bd.CadastraLocais(Convert.ToInt32(txtLocal.Text), txtDescricaoLocal.Text, Convert.ToInt32(txtCapacidade.Text));
-                MessageBox.Show("Local Cadastrado");
+                MessageBox.Show("Local Cadastrado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLocal.Text = "";
                 txtDescricaoLocal.Text = "";
                 txtCapacidade.Text = "";
@@ -95,7 +95,7 @@ namespace ProjetoWMS
             if (bd.LocalExiste == true)
             {
                 bd.ExcluirLocal(Convert.ToInt32(txtLocal.Text));
-                MessageBox.Show("Local Excluido");
+                MessageBox.Show("Local Excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtLocal.Text = "";
                 txtDescricaoLocal.Text = "";
                 txtCapacidade.Text = "";
@@ -103,7 +103,7 @@ namespace ProjetoWMS
             }
             else
             {
-                MessageBox.Show("Local Nao Existe");
+                MessageBox.Show("Local Nao Existe", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLocal.Text = "";
                 txtDescricaoLocal.Text = "";
                 txtCapacidade.Text = "";

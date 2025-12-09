@@ -15,7 +15,6 @@ namespace ProjetoWMS
 
         public static SQLiteConnection ConexaoBanco()
         {
-           //teste gihubs
             conexao = new SQLiteConnection("Data Source=D:\\R4\\ProjetoWMS\\ProjetoWMS\\BD\\WMS");
             conexao.Open();
             return conexao;
@@ -188,7 +187,7 @@ namespace ProjetoWMS
                 return linhas > 0;
             }
         }
-        public bool CadastraProduto(int codProduto, string descricao, string codBarra, string unVenda ,decimal Custo)
+        public bool CadastraProduto(int codProduto, string descricao, string codBarra, string unVenda, decimal Custo)
         {
             using (var conn = banco.ConexaoBanco())
             using (var cmd = conn.CreateCommand())
@@ -319,7 +318,7 @@ namespace ProjetoWMS
                 return linhas > 0;
             }
         }
-        public bool Lancamentos(int cod_Prod ,int Cod_Local,decimal quantidade, int tipo_lancamento, int data_lanc, string usuario, string obs)
+        public bool Lancamentos(int cod_Prod, int Cod_Local, decimal quantidade, int tipo_lancamento, int data_lanc, string usuario, string obs)
         {
             using (var conn = banco.ConexaoBanco())
             using (var cmd = conn.CreateCommand())
@@ -339,6 +338,43 @@ namespace ProjetoWMS
                 return linhas > 0;
             }
         }
-    }
+        public List<Lancamento> BuscarLancamentos(int? codProduto = null, int? codLocal = null)
+        {
+            List<Lancamento> lista = new List<Lancamento>();
 
+            using (var conn = banco.ConexaoBanco())
+            {
+                string sql = @"SELECT ID_Lancamento, Cod_Produto, Cod_Local, Quantidade,
+                             Tipo_Lancamento, Data_Lancamento, Usuario
+                             FROM Lancamentos
+                             WHERE (@CodProduto IS NULL OR Cod_Produto = @CodProduto)
+                             AND (@CodLocal   IS NULL OR Cod_Local   = @CodLocal);";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@CodProduto", (object)codProduto ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@CodLocal", (object)codLocal ?? DBNull.Value);
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Lancamento
+                            {
+                                Cod_Produto = Convert.ToInt32(dr["Cod_Produto"]),
+                                Cod_Local = Convert.ToInt32(dr["Cod_Local"]),
+                                Quantidade = Convert.ToDecimal(dr["Quantidade"]),
+                                Tipo_Lancamento = Convert.ToInt32(dr["Tipo_Lancamento"]),
+                                Data_Lancamento = dr["Data_Lancamento"].ToString(),
+                                Usuario = dr["Usuario"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+    }
 }

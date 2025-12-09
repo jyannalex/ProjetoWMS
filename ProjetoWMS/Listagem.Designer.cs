@@ -29,99 +29,104 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
-            materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            btnListar = new MaterialSkin.Controls.MaterialButton();
+            txtProduto = new MaterialSkin.Controls.MaterialTextBox();
+            txtLocal = new MaterialSkin.Controls.MaterialTextBox();
+            lvListagem = new MaterialSkin.Controls.MaterialListView();
             materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(materialButton1);
-            groupBox1.Controls.Add(materialTextBox1);
-            groupBox1.Controls.Add(materialTextBox2);
+            groupBox1.Controls.Add(btnListar);
+            groupBox1.Controls.Add(txtProduto);
+            groupBox1.Controls.Add(txtLocal);
             groupBox1.Location = new Point(22, 67);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(659, 81);
+            groupBox1.Size = new Size(910, 81);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
             // 
-            // materialButton1
+            // btnListar
             // 
-            materialButton1.AutoSize = false;
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(538, 22);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(114, 50);
-            materialButton1.TabIndex = 11;
-            materialButton1.Text = "Listar";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
+            btnListar.AutoSize = false;
+            btnListar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnListar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnListar.Depth = 0;
+            btnListar.HighEmphasis = true;
+            btnListar.Icon = null;
+            btnListar.Location = new Point(789, 22);
+            btnListar.Margin = new Padding(4, 6, 4, 6);
+            btnListar.MouseState = MaterialSkin.MouseState.HOVER;
+            btnListar.Name = "btnListar";
+            btnListar.NoAccentTextColor = Color.Empty;
+            btnListar.Size = new Size(114, 50);
+            btnListar.TabIndex = 11;
+            btnListar.Text = "Listar";
+            btnListar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnListar.UseAccentColor = false;
+            btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
             // 
-            // materialTextBox1
+            // txtProduto
             // 
-            materialTextBox1.AnimateReadOnly = false;
-            materialTextBox1.BorderStyle = BorderStyle.None;
-            materialTextBox1.Depth = 0;
-            materialTextBox1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox1.Hint = "Produto";
-            materialTextBox1.LeadingIcon = null;
-            materialTextBox1.Location = new Point(18, 22);
-            materialTextBox1.MaxLength = 50;
-            materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox1.Multiline = false;
-            materialTextBox1.Name = "materialTextBox1";
-            materialTextBox1.Size = new Size(232, 50);
-            materialTextBox1.TabIndex = 5;
-            materialTextBox1.Text = "";
-            materialTextBox1.TrailingIcon = null;
+            txtProduto.AnimateReadOnly = false;
+            txtProduto.BorderStyle = BorderStyle.None;
+            txtProduto.Depth = 0;
+            txtProduto.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtProduto.Hint = "Produto";
+            txtProduto.LeadingIcon = null;
+            txtProduto.Location = new Point(6, 22);
+            txtProduto.MaxLength = 50;
+            txtProduto.MouseState = MaterialSkin.MouseState.OUT;
+            txtProduto.Multiline = false;
+            txtProduto.Name = "txtProduto";
+            txtProduto.Size = new Size(373, 50);
+            txtProduto.TabIndex = 5;
+            txtProduto.Text = "";
+            txtProduto.TrailingIcon = null;
+            txtProduto.Leave += materialTextBox1_Leave;
             // 
-            // materialTextBox2
+            // txtLocal
             // 
-            materialTextBox2.AnimateReadOnly = false;
-            materialTextBox2.BorderStyle = BorderStyle.None;
-            materialTextBox2.Depth = 0;
-            materialTextBox2.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox2.Hint = "Local";
-            materialTextBox2.LeadingIcon = null;
-            materialTextBox2.Location = new Point(280, 22);
-            materialTextBox2.MaxLength = 50;
-            materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox2.Multiline = false;
-            materialTextBox2.Name = "materialTextBox2";
-            materialTextBox2.Size = new Size(229, 50);
-            materialTextBox2.TabIndex = 10;
-            materialTextBox2.Text = "";
-            materialTextBox2.TrailingIcon = null;
+            txtLocal.AnimateReadOnly = false;
+            txtLocal.BorderStyle = BorderStyle.None;
+            txtLocal.Depth = 0;
+            txtLocal.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtLocal.Hint = "Local";
+            txtLocal.LeadingIcon = null;
+            txtLocal.Location = new Point(393, 22);
+            txtLocal.MaxLength = 50;
+            txtLocal.MouseState = MaterialSkin.MouseState.OUT;
+            txtLocal.Multiline = false;
+            txtLocal.Name = "txtLocal";
+            txtLocal.Size = new Size(377, 50);
+            txtLocal.TabIndex = 10;
+            txtLocal.Text = "";
+            txtLocal.TrailingIcon = null;
+            txtLocal.Leave += txtLocal_Leave;
             // 
-            // materialListView1
+            // lvListagem
             // 
-            materialListView1.AutoSizeTable = false;
-            materialListView1.BackColor = Color.FromArgb(255, 255, 255);
-            materialListView1.BorderStyle = BorderStyle.None;
-            materialListView1.Depth = 0;
-            materialListView1.FullRowSelect = true;
-            materialListView1.Location = new Point(22, 154);
-            materialListView1.MinimumSize = new Size(200, 100);
-            materialListView1.MouseLocation = new Point(-1, -1);
-            materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            materialListView1.Name = "materialListView1";
-            materialListView1.OwnerDraw = true;
-            materialListView1.Size = new Size(659, 357);
-            materialListView1.TabIndex = 9;
-            materialListView1.UseCompatibleStateImageBehavior = false;
-            materialListView1.View = View.Details;
+            lvListagem.AutoSizeTable = false;
+            lvListagem.BackColor = Color.FromArgb(255, 255, 255);
+            lvListagem.BorderStyle = BorderStyle.None;
+            lvListagem.Depth = 0;
+            lvListagem.FullRowSelect = true;
+            lvListagem.Location = new Point(22, 154);
+            lvListagem.MinimumSize = new Size(200, 100);
+            lvListagem.MouseLocation = new Point(-1, -1);
+            lvListagem.MouseState = MaterialSkin.MouseState.OUT;
+            lvListagem.Name = "lvListagem";
+            lvListagem.OwnerDraw = true;
+            lvListagem.Size = new Size(903, 357);
+            lvListagem.TabIndex = 9;
+            lvListagem.UseCompatibleStateImageBehavior = false;
+            lvListagem.View = View.Details;
             // 
             // materialButton2
             // 
@@ -130,7 +135,7 @@
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(547, 520);
+            materialButton2.Location = new Point(798, 520);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -141,14 +146,41 @@
             materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton2.UseAccentColor = false;
             materialButton2.UseVisualStyleBackColor = true;
+            materialButton2.Click += materialButton2_Click;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.Location = new Point(296, 530);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(136, 19);
+            materialLabel1.TabIndex = 11;
+            materialLabel1.Text = "Total Quantidade : ";
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel2.Location = new Point(576, 530);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(91, 19);
+            materialLabel2.TabIndex = 12;
+            materialLabel2.Text = "Total Custo :";
             // 
             // Listagem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(693, 587);
+            ClientSize = new Size(956, 587);
+            Controls.Add(materialLabel2);
+            Controls.Add(materialLabel1);
             Controls.Add(materialButton2);
-            Controls.Add(materialListView1);
+            Controls.Add(lvListagem);
             Controls.Add(groupBox1);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -162,10 +194,13 @@
 
         #endregion
         private GroupBox groupBox1;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialListView lvListagem;
+        private MaterialSkin.Controls.MaterialTextBox txtProduto;
+        private MaterialSkin.Controls.MaterialButton txtListar;
+        private MaterialSkin.Controls.MaterialTextBox txtLocal;
         private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton btnListar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }
