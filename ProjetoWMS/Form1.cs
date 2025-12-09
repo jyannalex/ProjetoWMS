@@ -74,5 +74,13 @@ namespace ProjetoWMS
         {
 
         }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Configuracao TelaConfig = new Configuracao();
+            TelaConfig.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -37,9 +37,9 @@
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialCard1.SuspendLayout();
             materialCard2.SuspendLayout();
             materialCard3.SuspendLayout();
@@ -170,6 +170,7 @@
             btnConfig.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnConfig.UseAccentColor = false;
             btnConfig.UseVisualStyleBackColor = true;
+            btnConfig.Click += btnConfig_Click;
             // 
             // materialCard1
             // 
@@ -217,6 +218,18 @@
             materialCard2.TabIndex = 4;
             materialCard2.Tag = "";
             // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel2.Location = new Point(17, 1);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(102, 19);
+            materialLabel2.TabIndex = 6;
+            materialLabel2.Text = "Lançamentos:";
+            // 
             // materialCard3
             // 
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
@@ -245,18 +258,6 @@
             materialLabel1.Size = new Size(77, 19);
             materialLabel1.TabIndex = 5;
             materialLabel1.Text = "Cadastros:";
-            // 
-            // materialLabel2
-            // 
-            materialLabel2.AutoSize = true;
-            materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel2.Location = new Point(17, 1);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(102, 19);
-            materialLabel2.TabIndex = 6;
-            materialLabel2.Text = "Lançamentos:";
             // 
             // Form1
             // 

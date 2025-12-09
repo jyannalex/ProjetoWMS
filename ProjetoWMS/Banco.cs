@@ -102,8 +102,7 @@ namespace ProjetoWMS
                 string sql = @"
             SELECT Cod_Produto, Descricao_Prod, Cod_Barra, Un_Venda , Custo
             FROM Produtos
-            WHERE Cod_Produto = @Cod_produto;
-        ";
+            WHERE Cod_Produto = @Cod_produto;";
 
                 using (var cmd = new System.Data.SQLite.SQLiteCommand(sql, conn))
                 {
@@ -372,7 +371,6 @@ namespace ProjetoWMS
                     }
                 }
             }
-
             return lista;
         }
 

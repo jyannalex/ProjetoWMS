@@ -112,7 +112,7 @@ namespace ProjetoWMS
                 else
                     item.SubItems.Add("+ " + l.Quantidade.ToString());
                 item.SubItems.Add(bd.ConsultaProduto(l.Cod_Produto).Custo.ToString("F2"));
-                item.SubItems.Add(l.Tipo_Lancamento == 1 ? "Entrada" : "Saída");
+                item.SubItems.Add(l.Tipo_Lancamento == 0 ? "Entrada" : "Saída");
                 item.SubItems.Add(data);
                 item.SubItems.Add(l.Usuario);
 
