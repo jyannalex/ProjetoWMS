@@ -72,7 +72,7 @@ namespace ProjetoWMS
             else
             {
                 bd.CadastraLocais(Convert.ToInt32(txtLocal.Text), txtDescricaoLocal.Text, Convert.ToInt32(txtCapacidade.Text));
-                MessageBox.Show("Local Cadastrado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Local Cadastrado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtLocal.Text = "";
                 txtDescricaoLocal.Text = "";
                 txtCapacidade.Text = "";
